@@ -2,6 +2,8 @@
 
 > 极夜、极光、风雪与冰原之上，帝骑白熊北巡。
 
+**项目名**：`beishou`（北狩）· NORTHERN EXPEDITION
+
 ![预览](docs/preview.jpg)
 
 一个纯前端、零构建的 Three.js 3D 互动网页。白熊、帝王、冕旒、鞍具、旗帜与冰原全部由代码程序化生成，不依赖外部模型、贴图或在线资源；Three.js 已内置在 `vendor/`，断网也能运行。
@@ -19,7 +21,7 @@
 需要 Node.js 18+（仅用于起一个静态服务器，页面本身不依赖 Node）。
 
 ```bash
-cd D:\Project\test
+cd D:\Project\beishou
 npm start
 ```
 
