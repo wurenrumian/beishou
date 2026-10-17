@@ -1,0 +1,10 @@
+{
+  "name": "qin-polar-bear",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "秦始皇骑北极熊 · 三维动态网页",
+  "scripts": {
+    "start": "node serve.mjs"
+  }
+}

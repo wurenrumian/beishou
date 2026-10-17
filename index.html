@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#05090e" />
+  <title>秦始皇骑北极熊 · 北狩</title>
+  <meta name="description" content="秦始皇骑北极熊的三维动态场景：极光、风雪、青铜与玄衣。拖动旋转，滚轮远近，点击白熊触发长啸。" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2376131f'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23f4ecdc' font-family='KaiTi,serif'%3E秦%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div id="app">
+  <canvas id="stage" aria-label="秦始皇骑北极熊的三维动态场景"></canvas>
+
+  <div class="fx-vignette" aria-hidden="true"></div>
+  <div class="fx-grain" aria-hidden="true"></div>
+  <div class="frame" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="seal" aria-hidden="true">秦</span>
+      <div class="brand-text">
+        <span class="brand-title">北狩</span>
+        <span class="brand-sub">NORTHERN EXPEDITION · 210 BC</span>
+      </div>
+    </div>
+    <div class="telemetry" aria-hidden="true">
+      <span>78°42′N · 15°36′E</span>
+      <i class="sep"></i>
+      <span id="tempReadout">−38°C</span>
+      <i class="sep"></i>
+      <span id="windReadout">WIND 09.2 M/S</span>
+    </div>
+  </header>
+
+  <main class="title-block">
+    <h1 class="title">
+      <span class="title-cn">秦始皇</span>
+      <i class="title-line" aria-hidden="true"></i>
+      <span class="title-side">骑北极熊 · 三维巡礼</span>
+    </h1>
+    <p class="lede">公元前二一〇年，帝巡北海。<br />白熊自冰原来，伏于御前，遂驭之。</p>
+  </main>
+
+  <div class="hint" id="hint">
+    <span class="hint-key">拖动</span> 旋转
+    <i class="hint-sep">/</i>
+    <span class="hint-key">滚轮</span> 远近
+    <i class="hint-sep">/</i>
+    <span class="hint-key">点击白熊</span> 触发长啸
+  </div>
+
+  <nav class="controls" aria-label="场景控制">
+    <button class="ctrl is-active" data-action="orbit" aria-pressed="true">
+      <span class="ctrl-cn">巡游</span>
+      <span class="ctrl-en">ORBIT</span>
+    </button>
+    <button class="ctrl" data-action="close" aria-pressed="false">
+      <span class="ctrl-cn">近观</span>
+      <span class="ctrl-en">CLOSE-UP</span>
+    </button>
+    <button class="ctrl" data-action="storm" aria-pressed="false">
+      <span class="ctrl-cn">雪暴</span>
+      <span class="ctrl-en">BLIZZARD</span>
+    </button>
+  </nav>
+
+  <div class="roar-tag" id="roarTag" aria-hidden="true">震 疆</div>
+
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-seal">秦</div>
+      <p class="loader-label">正在凿冰</p>
+      <div class="loader-bar"><i></i></div>
+      <p class="loader-en">CHISELING THE ICE</p>
+    </div>
+  </div>
+
+  <div class="webgl-error" id="webglError" role="alert">
+    <p>此设备未能开启 WebGL。<br />请换用支持硬件加速的浏览器再试。</p>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/addons/"
+  }
+}
+</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
