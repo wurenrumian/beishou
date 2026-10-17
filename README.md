@@ -177,4 +177,6 @@ flowchart LR
 
 ## 许可
 
-本项目代码可自由学习、修改与二次创作。`vendor/three` 为 [Three.js](https://threejs.org/)，遵循 MIT License。
+本项目以 [MIT License](./LICENSE) 发布，可自由学习、修改与二次创作。
+
+`vendor/` 下为 [Three.js](https://threejs.org/) r186（`three` 核心与 `addons`），并非本项目原创，遵循 [MIT License](./vendor/LICENSE)，版权归 Three.js Authors。
